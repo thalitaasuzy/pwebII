@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Formulário</h1>
+    
+        <form>
+            <div class="form_field">
+                <label for="name">Nome</label>
+                <input id="input_name" type="text" maxlenght="50" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form_field">
+                <label for="date">Data de Nascimento</label>
+                <input id="input_date" type="date" placeholder="Digite sua Data de Nascimento" required>
+            </div>
+            <div class="form_field">
+                <label for="registration">Matricula</label>
+                <input id="input_registration" type="number" placeholder="Digite sua Matrícula" required>
+            </div>
+            <button id="submit_button" type="submit" onClick="filtro(event)">Enviar</button>
+        </form>
+    </div>  
+
+    <script>
+        function filtro(event){
+        return ( (event.charCode >= 48 && event.charCode <= 57) || (event.keyCode == 45) || 
+        (event.charCode == 46) )
+    }
+    </script>
+    
+</body>
+</html>
